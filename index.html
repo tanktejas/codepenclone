@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="codemirror-5.63.3/lib/codemirror.js"></script>
+    <link rel="stylesheet" href="codemirror-5.63.3/lib/codemirror.css" />
+    <link rel="stylesheet" href="codemirror-5.63.3/theme/colorforth.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <script src="codemirror-5.63.3/mode/sql/sql.js"></script>
+
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="codemirror-5.63.3/lib/codemirror.css" />
+    <script src="codemirror-5.63.3/lib/codemirror.js"></script>
+
+    <title>online html/css/js text editor</title>
+  </head>
+  <body>
+    <nav>
+      <label for="logo"><img src="./codepen.png" alt="" /></label>
+
+      <i onclick="funh()" class="fa fa-bars"></i>
+      <ul>
+        <li><a href="">HOME</a></li>
+        <li><a href="">EDITOR</a></li>
+        <li><a href="">CONTACT US</a></li>
+        <li><a href="">HELP</a></li>
+      </ul>
+    </nav>
+    <button class="buttonforrun" onclick="fun()">Run</button>
+
+    <div class="edi">
+      <div class="code">
+        <div class="htmlcode">
+          <button>HTML</button>
+        </div>
+        <div class="csscode">
+          <button>CSS</button>
+        </div>
+        <div class="jscode">
+          <button>JS</button>
+        </div>
+      </div>
+    </div>
+    <h2>OUTPUT WINDOW</h2>
+    <div class="preview">
+      <iframe id="preview-wind"></iframe>
+    </div>
+
+    <script>
+      const htmledit = CodeMirror(
+        document.querySelector(".edi .code .htmlcode"),
+        {
+          lineNumbers: true,
+          tabSize: 4,
+          mode: "xml",
+        }
+      );
+
+      const cssedit = CodeMirror(
+        document.querySelector(".edi .code .csscode"),
+        {
+          lineNumbers: true,
+          tabSize: 4,
+          mode: "css",
+        }
+      );
+      const jsedit = CodeMirror(document.querySelector(".edi .code .jscode"), {
+        lineNumbers: true,
+        tabSize: 4,
+        mode: "javascript",
+      });
+
+      const fun = () => {
+        const htmlc = htmledit.getValue();
+        const cssc = "<style>" + cssedit.getValue() + "</style>";
+        const jsc = "<scri" + "pt>" + jsedit.getValue() + "</scri" + "pt>";
+
+        let preview =
+          document.querySelector("#preview-wind").contentWindow.document;
+        preview.open();
+        preview.write(htmlc + cssc + jsc);
+        preview.close();
+      };
+
+      var flag = 0;
+      const funh = () => {
+        if (!flag) {
+          const abc = document.querySelector("ul");
+          abc.style.display = "block";
+          flag = 1;
+        } else {
+          flag = 0;
+          const abc = document.querySelector("ul");
+          abc.style.display = "none";
+        }
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,164 @@
+body {
+  padding: 0%;
+  margin: 0%;
+  height: 100vh;
+  box-sizing: border-box;
+  background: url(./code.jfif);
+}  
+* {
+  color: white;
+}
+.CodeMirror {
+  border: 1px solid black;
+  height: auto;
+  font-size: 20px;
+  color: white;
+}
+
+.edi {
+  margin-top: 10px;
+}
+.code {
+  height: 350px;
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(3, 34%);
+  background-color: rgb(232, 238, 226);
+}
+
+.code div button {
+  height: 34px;
+  width: 50px;
+  border-radius: 6px;
+  text-align: center;
+  font-weight: 800;
+  font-style: italic;
+  color: white;
+  background-color: black;
+}
+.preview {
+  background-color: rgba(255, 255, 255, 0.904);
+  box-shadow: 2px -2px 4px 4px black;
+  width: calc(100% - 20%);
+  margin: auto;
+  margin-top: 11px;
+  height: 360px;
+}
+#preview-wind {
+  width: 100%;
+  height: 100%;
+}
+nav {
+  background-color: rgba(0, 0, 0, 0.781);
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-radius: 12px;
+}
+
+nav label img {
+  height: 70px;
+  width: 100px;
+  border-radius: 50%;
+  padding: 9px 14px;
+  background: none;
+}
+nav ul {
+  float: right;
+  margin-top: 32px;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 5px;
+}
+ul li {
+  letter-spacing: 2px;
+  word-spacing: 2px;
+  height: 20px;
+  width: 200px;
+}
+
+ul li a {
+  font-family: "Ubuntu";
+  text-decoration: none;
+  font-weight: 900;
+}
+h2 {
+  color: black;
+  margin: auto;
+  font-family: "Ubuntu";
+  font-size: 35px;
+  text-align: center;
+  background-color: yellow;
+}
+ul li {
+  list-style: none;
+}
+.fa {
+  color: white !important;
+  display: none;
+}
+.fa:hover {
+  cursor: pointer;
+}
+.CodeMirror {
+  background-color: black !important;
+  color: white;
+  caret-color: white !important;
+}
+.CodeMirror div {
+  caret-color: white !important;
+}
+.CodeMirror-gutters {
+  background-color: rgba(58, 56, 56, 0.657) !important;
+}
+.CodeMirror-cursors {
+  visibility: visible !important;
+  caret-color: white !important;
+}
+.CodeMirror-linenumber {
+  background-color: rgba(48, 47, 47, 0.822);
+}
+.buttonforrun {
+  display: block;
+  margin: auto;
+  height: 56px;
+  width: 140px;
+  font-size: 33px;
+  color: white;
+  background-color: rgb(0, 0, 0);
+  border-radius: 19px;
+}
+.buttonforrun:hover {
+  cursor: pointer;
+}
+@media (max-width: 1007px) {
+  .fa {
+    display: block;
+    float: right;
+    margin-top: 24px;
+    margin-right: 43px;
+    color: black;
+    font-size: 47px;
+  }
+  li {
+    display: block;
+    width: 173px !important;
+    padding-top: 23px;
+    padding: auto;
+    margin: auto;
+    text-align: center;
+  }
+  ul {
+    display: none;
+    float: right;
+    width: 100%;
+    padding-top: 0px;
+    margin-top: 0px !important;
+    background-color: red;
+  }
+}
