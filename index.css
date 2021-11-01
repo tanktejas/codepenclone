@@ -4,7 +4,7 @@ body {
   height: 100vh;
   box-sizing: border-box;
   background: url(./code.jfif);
-}  
+}
 * {
   color: white;
 }
@@ -106,19 +106,20 @@ ul li {
   cursor: pointer;
 }
 .CodeMirror {
-  background-color: black !important;
+  background-color: rgb(97, 107, 65) !important;
   color: white;
   caret-color: white !important;
 }
 .CodeMirror div {
-  caret-color: white !important;
+  caret-color: rgb(228, 23, 23) !important;
 }
 .CodeMirror-gutters {
-  background-color: rgba(58, 56, 56, 0.657) !important;
+  background-color: rgba(0, 0, 0, 0.657) !important;
 }
 .CodeMirror-cursors {
-  visibility: visible !important;
-  caret-color: white !important;
+  width: 12px !important;
+
+  caret-color: rgb(255, 0, 0) !important;
 }
 .CodeMirror-linenumber {
   background-color: rgba(48, 47, 47, 0.822);
@@ -137,6 +138,11 @@ ul li {
   cursor: pointer;
 }
 @media (max-width: 1007px) {
+  .code {
+    display: grid;
+    grid-row: auto;
+    grid-template-rows: repeat(3, 200px);
+  }
   .fa {
     display: block;
     float: right;
